@@ -11,7 +11,7 @@
 @interface DetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *completionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deadlineLabel;
@@ -34,11 +34,11 @@
 
 - (void)configureView {
     
-    self.descriptionLabel.numberOfLines = 0;
+    self.detailsLabel.numberOfLines = 0;
     
     self.title = @"Details";
     self.titleLabel.text = self.ourTodo.title;
-    self.descriptionLabel.text = self.ourTodo.theDescription;
+    self.detailsLabel.text = self.ourTodo.details;
     self.completionLabel.text = [NSString stringWithFormat:@"Completed: %@", self.ourTodo.isCompleted ? @"YES" : @"NO"];
     self.priorityLabel.text = [NSString stringWithFormat:@"Priority: %lld", self.ourTodo.priority];
     self.deadlineLabel.text = [NSString stringWithFormat:@"Deadline: %@", self.ourTodo.deadline];
