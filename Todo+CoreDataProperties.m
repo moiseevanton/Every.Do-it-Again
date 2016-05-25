@@ -18,5 +18,7 @@
 @dynamic priority;
 @dynamic isCompleted;
 @dynamic details;
+@dynamic deadline;
+@dynamic difficulty;
 
 @end

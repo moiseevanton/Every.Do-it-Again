@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Todo View Controller-->
@@ -127,6 +128,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ku-kS-nfp">
+                                <rect key="frame" x="20" y="287" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbW-QF-hel">
+                                <rect key="frame" x="20" y="248" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -145,7 +158,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="completionLabel" destination="KVO-jM-lQw" id="vrK-ia-COj"/>
+                        <outlet property="deadlineLabel" destination="jbW-QF-hel" id="614-bR-Xva"/>
                         <outlet property="descriptionLabel" destination="YF5-mX-jEw" id="8d2-1H-5V5"/>
+                        <outlet property="difficultyLabel" destination="6ku-kS-nfp" id="ndk-tT-PyE"/>
                         <outlet property="priorityLabel" destination="SPR-NM-Kcy" id="5kr-AB-jx4"/>
                         <outlet property="titleLabel" destination="UF5-rA-YSo" id="OAN-T2-qty"/>
                     </connections>
@@ -170,6 +185,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqg-63-Iq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-298.5" y="348.5"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="vf3-H6-Vnt">
+            <objects>
+                <viewController id="edG-Ts-pmd" customClass="TaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="934-DE-Vvl"/>
+                        <viewControllerLayoutGuide type="bottom" id="R3t-Pd-FmA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ag0-Ng-Nlz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your defaults here." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itK-pv-uCX">
+                                <rect key="frame" x="20" y="84" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="default deadline" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPE-Ay-oRL">
+                                <rect key="frame" x="20" y="137" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="default difficulty" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWm-Im-4p3">
+                                <rect key="frame" x="16" y="187" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sb-Vz-ddD">
+                                <rect key="frame" x="172" y="241" width="30" height="30"/>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="setDefaults:" destination="edG-Ts-pmd" eventType="touchUpInside" id="yC6-Ly-RXe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pWm-Im-4p3" firstAttribute="trailing" secondItem="Ag0-Ng-Nlz" secondAttribute="trailingMargin" id="3ov-1y-0Uv"/>
+                            <constraint firstItem="itK-pv-uCX" firstAttribute="top" secondItem="934-DE-Vvl" secondAttribute="bottom" constant="20" id="8k5-us-W0y"/>
+                            <constraint firstItem="pWm-Im-4p3" firstAttribute="top" secondItem="oPE-Ay-oRL" secondAttribute="bottom" constant="20" id="Idn-Zt-g0O"/>
+                            <constraint firstItem="pWm-Im-4p3" firstAttribute="leading" secondItem="Ag0-Ng-Nlz" secondAttribute="leadingMargin" id="S9W-bL-TK3"/>
+                            <constraint firstAttribute="trailing" secondItem="6Sb-Vz-ddD" secondAttribute="trailing" constant="173" id="YVX-HA-12Z"/>
+                            <constraint firstItem="oPE-Ay-oRL" firstAttribute="leading" secondItem="Ag0-Ng-Nlz" secondAttribute="leading" constant="20" id="aIg-r8-eOr"/>
+                            <constraint firstItem="6Sb-Vz-ddD" firstAttribute="leading" secondItem="Ag0-Ng-Nlz" secondAttribute="leading" constant="172" id="cIj-Z5-oGW"/>
+                            <constraint firstAttribute="trailing" secondItem="oPE-Ay-oRL" secondAttribute="trailing" constant="20" id="eE8-2I-JwA"/>
+                            <constraint firstItem="oPE-Ay-oRL" firstAttribute="top" secondItem="itK-pv-uCX" secondAttribute="bottom" constant="32" id="eUT-Mq-bID"/>
+                            <constraint firstItem="itK-pv-uCX" firstAttribute="leading" secondItem="Ag0-Ng-Nlz" secondAttribute="leading" constant="20" id="i7N-47-KDC"/>
+                            <constraint firstItem="6Sb-Vz-ddD" firstAttribute="top" secondItem="pWm-Im-4p3" secondAttribute="bottom" constant="24" id="lDc-Fy-xQm"/>
+                            <constraint firstAttribute="trailing" secondItem="itK-pv-uCX" secondAttribute="trailing" constant="20" id="rA2-Ad-bVk"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="defaultDeadlineTextField" destination="oPE-Ay-oRL" id="dxk-se-rAv"/>
+                        <outlet property="defaultDifficultyTextField" destination="pWm-Im-4p3" id="4U4-Iv-cbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzY-c9-dMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.5" y="-398.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -252,6 +329,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zdZ-Sp-UKl">
+                        <barButtonItem key="leftBarButtonItem" title="Set Defaults" id="Q0G-vp-4GQ">
+                            <connections>
+                                <segue destination="edG-Ts-pmd" kind="show" identifier="setDefaults" id="eHS-b9-jRl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Wo-5z-BBs">
                             <connections>
                                 <segue destination="uty-Kt-muh" kind="show" identifier="newTodo" id="Y9w-oi-LgB"/>

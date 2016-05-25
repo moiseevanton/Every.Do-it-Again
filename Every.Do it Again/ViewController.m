@@ -48,6 +48,8 @@
     
     // set title
     self.title = @"Todo list";
+
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

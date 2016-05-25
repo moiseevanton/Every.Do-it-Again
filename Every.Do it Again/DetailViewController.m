@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *completionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *deadlineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *difficultyLabel;
 
 @end
 
@@ -39,6 +41,8 @@
     self.descriptionLabel.text = self.ourTodo.theDescription;
     self.completionLabel.text = [NSString stringWithFormat:@"Completed: %@", self.ourTodo.isCompleted ? @"YES" : @"NO"];
     self.priorityLabel.text = [NSString stringWithFormat:@"Priority: %lld", self.ourTodo.priority];
+    self.deadlineLabel.text = [NSString stringWithFormat:@"Deadline: %@", self.ourTodo.deadline];
+    self.difficultyLabel.text = [NSString stringWithFormat:@"Difficulty: %@", self.ourTodo.difficulty];
     
 }
 

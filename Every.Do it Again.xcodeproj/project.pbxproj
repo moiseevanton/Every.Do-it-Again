@@ -19,6 +19,7 @@
 		E9F050531CF5FDEE00AC065B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F050521CF5FDEE00AC065B /* CustomCell.m */; };
 		E9F050561CF60A1E00AC065B /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F050551CF60A1E00AC065B /* NewTodoViewController.m */; };
 		E9F050591CF61AD600AC065B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F050581CF61AD600AC065B /* DetailViewController.m */; };
+		E9F0505C1CF634C600AC065B /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0505B1CF634C600AC065B /* TaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		E9F050551CF60A1E00AC065B /* NewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
 		E9F050571CF61AD600AC065B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E9F050581CF61AD600AC065B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E9F0505A1CF634C600AC065B /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		E9F0505B1CF634C600AC065B /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				E9F050551CF60A1E00AC065B /* NewTodoViewController.m */,
 				E9F050571CF61AD600AC065B /* DetailViewController.h */,
 				E9F050581CF61AD600AC065B /* DetailViewController.m */,
+				E9F0505A1CF634C600AC065B /* TaskViewController.h */,
+				E9F0505B1CF634C600AC065B /* TaskViewController.m */,
 			);
 			path = "Every.Do it Again";
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				E9F050561CF60A1E00AC065B /* NewTodoViewController.m in Sources */,
 				E9F0504F1CF5FD3A00AC065B /* Todo+CoreDataProperties.m in Sources */,
 				E9F050531CF5FDEE00AC065B /* CustomCell.m in Sources */,
+				E9F0505C1CF634C600AC065B /* TaskViewController.m in Sources */,
 				E9F0503F1CF5FB8300AC065B /* Every_Do_it_Again.xcdatamodeld in Sources */,
 				E9F050331CF5FB8300AC065B /* main.m in Sources */,
 			);

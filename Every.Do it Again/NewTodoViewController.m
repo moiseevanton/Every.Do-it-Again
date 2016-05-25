@@ -31,12 +31,15 @@
 }
 
 - (IBAction)createNewTodo:(id)sender {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     Todo *newTodo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.moc];
     newTodo.title = self.titleTextField.text;
     newTodo.theDescription = self.descriptionTextField.text;
     newTodo.priority = [self.priorityTextField.text intValue];
     newTodo.details = self.detailsTextField.text;
     newTodo.isCompleted = NO;
+    newTodo.deadline = [ud objectForKey:@"defaultDeadline"];
+    newTodo.difficulty = [ud objectForKey:@"defaultDifficulty"];
     [self.moc save:nil];
     
     [self.navigationController popToRootViewControllerAnimated:YES];

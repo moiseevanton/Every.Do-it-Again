@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int64_t priority;
 @property (nonatomic) BOOL isCompleted;
 @property (nullable, nonatomic, retain) NSString *details;
+@property (nullable, nonatomic, retain) NSString *deadline;
+@property (nullable, nonatomic, retain) NSString *difficulty;
 
 @end
 
